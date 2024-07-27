@@ -195,6 +195,37 @@ function initMap() {
 
 window.initMap = initMap;
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Inicializa EmailJS con tu user_id
+  emailjs.init('hbfib5vK7ZjTsK7vK'); // Tu user_id de EmailJS
+
+  // Obtén el formulario por su ID
+  const form = document.getElementById('contact-form');
+  
+  // Asegúrate de que el formulario existe
+  if (form) {
+      // Añade un manejador de eventos para el envío del formulario
+      form.addEventListener('submit', function(event) {
+          event.preventDefault(); // Evita el envío del formulario por defecto
+
+          // Envía el correo usando EmailJS
+          emailjs.sendForm('service_45qj2rj', 'template_cmv6o4v', form)
+              .then(function(response) {
+                  console.log('Success:', response.status, response.text);
+                  alert('Tu mensaje ha sido enviado con éxito.');
+              }, function(error) {
+                  console.log('Error:', error);
+                  alert('Hubo un problema al enviar tu mensaje. Inténtalo de nuevo.');
+              });
+      });
+  } else {
+      console.error('Formulario con ID "contact-form" no encontrado.');
+  }
+});
+
+
+
+
 /*
 function iniciarMap(){
   var coord = {lat:-110.9990309 ,lng: -110.9964506};
