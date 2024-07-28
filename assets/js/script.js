@@ -343,7 +343,8 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
-  
+
+
 
   document.addEventListener('DOMContentLoaded', function() {
     var linkTelefono = document.getElementById('telefono');
@@ -383,6 +384,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+
+
+
+
+
+
+  
 
 
 
