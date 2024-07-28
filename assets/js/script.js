@@ -262,11 +262,62 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  document.addEventListener('DOMContentLoaded', function() {
+    var link = document.getElementById('tiktok');
+    if (link) {
+      link.addEventListener('click', function(event) {
+        // Enviar el evento a Google Tag Manager
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          'event': 'click_enlace_tiktok'  // Nombre del evento personalizado
+        });
+        // Opcional: Esperar 1 segundo antes de permitir la navegación
+        setTimeout(function() {
+          window.location.href = link.href;
+        }, 1000);
+        // Prevenir la navegación inmediata
+        event.preventDefault();
+      });
+    }
+  });
 
+  document.addEventListener('DOMContentLoaded', function() {
+    var link = document.getElementById('linkedin');
+    if (link) {
+      link.addEventListener('click', function(event) {
+        // Enviar el evento a Google Tag Manager
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          'event': 'click_enlace_linkedin'  // Nombre del evento personalizado
+        });
+        // Opcional: Esperar 1 segundo antes de permitir la navegación
+        setTimeout(function() {
+          window.location.href = link.href;
+        }, 1000);
+        // Prevenir la navegación inmediata
+        event.preventDefault();
+      });
+    }
+  });
 
-
-
-
+  document.addEventListener('DOMContentLoaded', function() {
+    var link = document.getElementById('google-maps');
+    if (link) {
+      link.addEventListener('click', function(event) {
+        // Enviar el evento a Google Tag Manager
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          'event': 'click_enlace_google-maps'  // Nombre del evento personalizado
+        });
+        // Opcional: Esperar 1 segundo antes de permitir la navegación
+        setTimeout(function() {
+          window.location.href = link.href;
+        }, 1000);
+        // Prevenir la navegación inmediata
+        event.preventDefault();
+      });
+    }
+  });
 
 /*
 function iniciarMap(){
