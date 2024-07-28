@@ -223,6 +223,48 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+  document.addEventListener('DOMContentLoaded', function() {
+    var link = document.getElementById('meta');
+    if (link) {
+      link.addEventListener('click', function(event) {
+        // Enviar el evento a Google Tag Manager
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          'event': 'click_enlace_meta'
+        });
+        // Opcional: Esperar 1 segundo antes de permitir la navegación
+        setTimeout(function() {
+          window.location.href = link.href;
+        }, 1000);
+        // Prevenir la navegación inmediata
+        event.preventDefault();
+      });
+    }
+  });
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var link = document.getElementById('instagram');
+    if (link) {
+      link.addEventListener('click', function(event) {
+        // Enviar el evento a Google Tag Manager
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          'event': 'click_enlace_instagram'  // Nombre del evento personalizado
+        });
+        // Opcional: Esperar 1 segundo antes de permitir la navegación
+        setTimeout(function() {
+          window.location.href = link.href;
+        }, 1000);
+        // Prevenir la navegación inmediata
+        event.preventDefault();
+      });
+    }
+  });
+
+
+
+
 
 
 
