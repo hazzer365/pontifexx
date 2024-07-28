@@ -244,6 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   
+  
   document.addEventListener('DOMContentLoaded', function() {
     var linkInstagram = document.getElementById('instagram');
     if (linkInstagram) {
@@ -253,17 +254,19 @@ document.addEventListener('DOMContentLoaded', function() {
         window.dataLayer.push({
           'event': 'click_enlace_instagram'
         });
-        // Opcional: Esperar 1 segundo antes de permitir la navegación
-        setTimeout(function() {
-          window.location.href = linkInstagram.href;
-        }, 1000);
+        
         // Prevenir la navegación inmediata
         event.preventDefault();
+  
+        // Esperar 1 segundo antes de abrir el enlace en una nueva ventana
+        setTimeout(function() {
+          // Abre el enlace en una nueva ventana
+          window.open(linkInstagram.href, '_blank');
+        }, 1000);
       });
     }
   });
-
-
+  
 
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -275,15 +278,19 @@ document.addEventListener('DOMContentLoaded', function() {
         window.dataLayer.push({
           'event': 'click_enlace_tiktok'
         });
-        // Opcional: Esperar 1 segundo antes de permitir la navegación
-        setTimeout(function() {
-          window.location.href = linkTikTok.href;
-        }, 1000);
+        
         // Prevenir la navegación inmediata
         event.preventDefault();
+  
+        // Esperar 1 segundo antes de abrir el enlace en una nueva ventana
+        setTimeout(function() {
+          // Abre el enlace en una nueva ventana
+          window.open(linkTikTok.href, '_blank');
+        }, 1000);
       });
     }
   });
+  
 
 
 
@@ -297,15 +304,19 @@ document.addEventListener('DOMContentLoaded', function() {
         window.dataLayer.push({
           'event': 'click_enlace_linkedin'
         });
-        // Opcional: Esperar 1 segundo antes de permitir la navegación
-        setTimeout(function() {
-          window.location.href = linkLinkedIn.href;
-        }, 1000);
+        
         // Prevenir la navegación inmediata
         event.preventDefault();
+  
+        // Esperar 1 segundo antes de abrir el enlace en una nueva ventana
+        setTimeout(function() {
+          // Abre el enlace en una nueva ventana
+          window.open(linkLinkedIn.href, '_blank');
+        }, 1000);
       });
     }
   });
+  
 
 
 
@@ -318,15 +329,19 @@ document.addEventListener('DOMContentLoaded', function() {
         window.dataLayer.push({
           'event': 'click_enlace_google_maps'
         });
-        // Opcional: Esperar 1 segundo antes de permitir la navegación
-        setTimeout(function() {
-          window.location.href = linkGoogleMaps.href;
-        }, 1000);
+        
         // Prevenir la navegación inmediata
         event.preventDefault();
+  
+        // Esperar 1 segundo antes de abrir el enlace en una nueva ventana
+        setTimeout(function() {
+          // Abre el enlace en una nueva ventana
+          window.open(linkGoogleMaps.href, '_blank');
+        }, 1000);
       });
     }
   });
+  
 
 
 
