@@ -243,18 +243,19 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
+  
   document.addEventListener('DOMContentLoaded', function() {
-    var link = document.getElementById('instagram');
-    if (link) {
-      link.addEventListener('click', function(event) {
+    var linkInstagram = document.getElementById('instagram');
+    if (linkInstagram) {
+      linkInstagram.addEventListener('click', function(event) {
         // Enviar el evento a Google Tag Manager
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
-          'event': 'click_enlace_instagram'  // Nombre del evento personalizado
+          'event': 'click_enlace_instagram'
         });
         // Opcional: Esperar 1 segundo antes de permitir la navegación
         setTimeout(function() {
-          window.location.href = link.href;
+          window.location.href = linkInstagram.href;
         }, 1000);
         // Prevenir la navegación inmediata
         event.preventDefault();
@@ -262,18 +263,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+
+
+
   document.addEventListener('DOMContentLoaded', function() {
-    var link = document.getElementById('tiktok');
-    if (link) {
-      link.addEventListener('click', function(event) {
+    var linkTikTok = document.getElementById('tiktok');
+    if (linkTikTok) {
+      linkTikTok.addEventListener('click', function(event) {
         // Enviar el evento a Google Tag Manager
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
-          'event': 'click_enlace_tiktok'  // Nombre del evento personalizado
+          'event': 'click_enlace_tiktok'
         });
         // Opcional: Esperar 1 segundo antes de permitir la navegación
         setTimeout(function() {
-          window.location.href = link.href;
+          window.location.href = linkTikTok.href;
         }, 1000);
         // Prevenir la navegación inmediata
         event.preventDefault();
@@ -281,18 +285,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+
+
+
   document.addEventListener('DOMContentLoaded', function() {
-    var link = document.getElementById('linkedin');
-    if (link) {
-      link.addEventListener('click', function(event) {
+    var linkLinkedIn = document.getElementById('linkedin');
+    if (linkLinkedIn) {
+      linkLinkedIn.addEventListener('click', function(event) {
         // Enviar el evento a Google Tag Manager
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
-          'event': 'click_enlace_linkedin'  // Nombre del evento personalizado
+          'event': 'click_enlace_linkedin'
         });
         // Opcional: Esperar 1 segundo antes de permitir la navegación
         setTimeout(function() {
-          window.location.href = link.href;
+          window.location.href = linkLinkedIn.href;
         }, 1000);
         // Prevenir la navegación inmediata
         event.preventDefault();
@@ -300,24 +307,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+
+
   document.addEventListener('DOMContentLoaded', function() {
-    var link = document.getElementById('google-maps');
-    if (link) {
-      link.addEventListener('click', function(event) {
+    var linkGoogleMaps = document.getElementById('google-maps');
+    if (linkGoogleMaps) {
+      linkGoogleMaps.addEventListener('click', function(event) {
         // Enviar el evento a Google Tag Manager
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
-          'event': 'click_enlace_google-maps'  // Nombre del evento personalizado
+          'event': 'click_enlace_google_maps'
         });
         // Opcional: Esperar 1 segundo antes de permitir la navegación
         setTimeout(function() {
-          window.location.href = link.href;
+          window.location.href = linkGoogleMaps.href;
         }, 1000);
         // Prevenir la navegación inmediata
         event.preventDefault();
       });
     }
   });
+
+
 
 /*
 function iniciarMap(){
