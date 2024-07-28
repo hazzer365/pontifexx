@@ -346,43 +346,68 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+  
   document.addEventListener('DOMContentLoaded', function() {
     var linkTelefono = document.getElementById('telefono');
     if (linkTelefono) {
       linkTelefono.addEventListener('click', function(event) {
-        // Enviar el evento a Google Tag Manager
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
+        // Crear un evento personalizado para enviar a Google Tag Manager
+        var eventData = {
           'event': 'click_enlace_telefono'
-        });
-        // Opcional: Esperar 1 segundo antes de permitir la navegación
+        };
+
+        // Enviar el evento usando sendBeacon para una redirección más confiable
+        if (navigator.sendBeacon) {
+          var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+          navigator.sendBeacon('/path-to-your-gtm-endpoint', blob);
+        } else {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push(eventData);
+        }
+
+        // Esperar 1 segundo antes de permitir la navegación
         setTimeout(function() {
           window.location.href = linkTelefono.href;
         }, 1000);
+
         // Prevenir la navegación inmediata
         event.preventDefault();
       });
     }
   });
 
+
+
   document.addEventListener('DOMContentLoaded', function() {
     var linkCorreo = document.getElementById('correo');
     if (linkCorreo) {
       linkCorreo.addEventListener('click', function(event) {
-        // Enviar el evento a Google Tag Manager
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
+        // Crear un evento personalizado para enviar a Google Tag Manager
+        var eventData = {
           'event': 'click_enlace_correo'
-        });
-        // Opcional: Esperar 1 segundo antes de permitir la navegación
+        };
+
+        // Enviar el evento usando sendBeacon para una redirección más confiable
+        if (navigator.sendBeacon) {
+          var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+          navigator.sendBeacon('/path-to-your-gtm-endpoint', blob);
+        } else {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push(eventData);
+        }
+
+        // Esperar 1 segundo antes de permitir la navegación
         setTimeout(function() {
           window.location.href = linkCorreo.href;
         }, 1000);
+
         // Prevenir la navegación inmediata
         event.preventDefault();
       });
     }
   });
+
+
 
 
 
