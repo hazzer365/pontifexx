@@ -223,27 +223,29 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-  document.addEventListener('DOMContentLoaded', function() {
-    var link = document.getElementById('meta');
-    if (link) {
-      link.addEventListener('click', function(event) {
-        // Enviar el evento a Google Tag Manager
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          'event': 'click_enlace_meta'
-        });
-        // Opcional: Esperar 1 segundo antes de permitir la navegación
-        setTimeout(function() {
-          window.location.href = link.href;
-        }, 1000);
-        // Prevenir la navegación inmediata
-        event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+  var linkInstagram = document.getElementById('facebook');
+  if (linkInstagram) {
+    linkInstagram.addEventListener('click', function(event) {
+      // Enviar el evento a Google Tag Manager
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'click_enlace_facebook'
       });
-    }
-  });
+      
+      // Prevenir la navegación inmediata
+      event.preventDefault();
 
+      // Esperar 1 segundo antes de abrir el enlace en una nueva ventana
+      setTimeout(function() {
+        // Abre el enlace en una nueva ventana
+        window.open(linkInstagram.href, '_blank');
+      }, 1000);
+    });
+  }
+});
 
-  
+ 
   
   document.addEventListener('DOMContentLoaded', function() {
     var linkInstagram = document.getElementById('instagram');
@@ -342,6 +344,45 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var linkTelefono = document.getElementById('telefono');
+    if (linkTelefono) {
+      linkTelefono.addEventListener('click', function(event) {
+        // Enviar el evento a Google Tag Manager
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          'event': 'click_enlace_telefono'
+        });
+        // Opcional: Esperar 1 segundo antes de permitir la navegación
+        setTimeout(function() {
+          window.location.href = linkTelefono.href;
+        }, 1000);
+        // Prevenir la navegación inmediata
+        event.preventDefault();
+      });
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var linkCorreo = document.getElementById('correo');
+    if (linkCorreo) {
+      linkCorreo.addEventListener('click', function(event) {
+        // Enviar el evento a Google Tag Manager
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          'event': 'click_enlace_correo'
+        });
+        // Opcional: Esperar 1 segundo antes de permitir la navegación
+        setTimeout(function() {
+          window.location.href = linkCorreo.href;
+        }, 1000);
+        // Prevenir la navegación inmediata
+        event.preventDefault();
+      });
+    }
+  });
+
 
 
 
