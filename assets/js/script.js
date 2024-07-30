@@ -343,6 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
+
   document.addEventListener('DOMContentLoaded', function() {
     var linkCorreo = document.getElementById('correo');
     if (linkCorreo) {
@@ -352,20 +353,39 @@ document.addEventListener('DOMContentLoaded', function() {
         window.dataLayer.push({
           'event': 'click_enlace_correo'
         });
-
-        // Prevenir la navegación inmediata
+        
+        // Prevenir la acción inmediata
         event.preventDefault();
-
-        // Esperar 1 segundo antes de abrir el enlace en el cliente de correo
+  
+        // Esperar 1 segundo antes de continuar con la acción predeterminada
         setTimeout(function() {
-          // Abre el enlace en el cliente de correo
+          // Continuar con la acción predeterminada del enlace
           window.location.href = linkCorreo.href;
         }, 1000);
       });
     }
   });
-
-
+  document.addEventListener('DOMContentLoaded', function() {
+    var linkTelefono = document.getElementById('telefono');
+    if (linkTelefono) {
+      linkTelefono.addEventListener('click', function(event) {
+        // Enviar el evento a Google Tag Manager
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          'event': 'click_enlace_telefono'
+        });
+        
+        // Prevenir la acción inmediata
+        event.preventDefault();
+  
+        // Esperar 1 segundo antes de continuar con la acción predeterminada
+        setTimeout(function() {
+          // Continuar con la acción predeterminada del enlace
+          window.location.href = linkTelefono.href;
+        }, 1000);
+      });
+    }
+  });
   
   
 
