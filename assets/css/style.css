@@ -1,6 +1,7 @@
 /*-----------------------------------*\
   #index.css
 \*-----------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700;800&family=Roboto:wght@300;400;500;700&display=swap');
 
 /**
  * copyright 2022 codewithsadee
@@ -286,7 +287,7 @@
     color: rgb(0, 93, 96)/*PRÉSTAMOS PERSONALES*/
   }
   .span60{
-    color: rgb(0, 0, 0)/*PRÉSTAMOS PERSONALES*/
+    color: rgb(180, 186, 191)/*PRÉSTAMOS PERSONALES*/
   }
   .span61{
     color: rgb(0, 93, 96)/*PRÉSTAMOS PERSONALES*/
@@ -342,20 +343,26 @@
   .span78{
     color: rgb(180, 186, 191)/*PRÉSTAMOS PERSONALES*/
   }
-  .span79{
-    color: rgb(33, 33, 33);/*PRÉSTAMOS PERSONALES*/
-  }
+  .span79 {
+    color: rgb(255, 255, 255);
+    font-size: 20px; /* Puedes ajustar el tamaño a tu preferencia */
+    
+}
+
   .span80{
-    color: rgb(33, 33, 33);/*PRÉSTAMOS PERSONALES*/
+    color: rgb(255, 255, 255);/*PRÉSTAMOS PERSONALES*/
+    font-size: 18px;
   }
   .span81{
-    color: rgb(33, 33, 33);/*PRÉSTAMOS PERSONALES*/
+    color: rgb(255, 255, 255);/*PRÉSTAMOS PERSONALES*/
+    font-size: 20px;
   }
   .span82{
-    color: rgb(33, 33, 33);/*PRÉSTAMOS PERSONALES*/
+    color: rgb(255, 255, 255);/*PRÉSTAMOS PERSONALES*/
+    font-size: 20px;
   }
   .span83{
-    color: rgb(33, 33, 33);/*PRÉSTAMOS PERSONALES*/
+    color: rgb(255, 255, 255);/*PRÉSTAMOS PERSONALES*/
   }
   .span84{
     color: rgb(33, 33, 33);/*PRÉSTAMOS PERSONALES*/
@@ -401,7 +408,7 @@
 
   /* font-family */
   --fontFamily-forum: Dm Sans- regular, bold, extra bold;
-  --fontFamily-dm_sans: Dm Sans- regular, bold, extra bold;
+  --fontFamily-dm_sans: Roboto;
 
   /* font-size */
   --fontSize-display-1: calc(1.3rem + 6.7vw);
@@ -414,7 +421,7 @@
   --fontSize-body-1: 2.4rem;
   --fontSize-body-2: 1.6rem;
   --fontSize-body-3: 1.8rem;
-  --fontSize-body-4: 1.6rem;
+  --fontSize-body-4: 2rem; /*cambio de*/
   --fontSize-label-1: 1.4rem;
   --fontSize-label-2: 1.2rem;
 
@@ -550,7 +557,7 @@ body {
 
 body.loaded { overflow: overlay; }
 
-body.nav-active { overflow: hidden; }
+
 
 ::-webkit-scrollbar { width: 5px; }
 
@@ -804,7 +811,7 @@ body.nav-active { overflow: hidden; }
   left: 0;
   width: 50%;
   height: 100%;
-  background-image: linear-gradient(to right, transparent 0%, #fff6 100%);
+  background-image: linear-gradient(to right, transparent 0%, rgba(255, 0, 0, 0.4) 100%);
   transform: skewX(-0.08turn) translateX(-180%);
 }
 
@@ -860,7 +867,7 @@ body.nav-active { overflow: hidden; }
   color:#006479;;
   height: 56px;
   padding: 10px 20px;
-  border: 1px solid #006479;;
+  border: 1px solid #006479;
   margin-block-end: 20px;
   outline: none;
   transition: border-color var(--transition-2);
@@ -1038,7 +1045,7 @@ body.nav-active { overflow: hidden; }
 
 .navbar {
   position: fixed;
-  background-color: var(--smoky-black-1);
+  background-color: rgb(180, 186, 191);
   top: 0;
   left: -360px;
   bottom: 0;
@@ -1066,9 +1073,13 @@ body.nav-active { overflow: hidden; }
   margin-block: 30px 20px;
 }
 
-.navbar .close-btn ion-icon { --ionicon-stroke-width: 40px; }
+.navbar .close-btn ion-icon {
+  --ionicon-stroke-width: 40px;
+}
 
-.navbar .close-btn:is(:hover, :focus-visible) { color: var(--gold-crayola); }
+.navbar .close-btn:is(:hover, :focus-visible) {
+  color: var(--gold-crayola);
+}
 
 .navbar .logo {
   max-width: max-content;
@@ -1081,19 +1092,26 @@ body.nav-active { overflow: hidden; }
   margin-block-end: 100px;
 }
 
-.navbar-item2 { color: blue }
+.navbar-item {
+  border-block-start: 1px solid var(--white-alpha-20);
+}
 
 .navbar-link {
   position: relative;
-  color: hsla(187, 100%, 22%, 1);/*cambio*/
+  font-size: var(--fontSize-label-2);
+  color: var(--quick-silver); /* Cambiar el color de texto a gris */
   text-transform: uppercase;
   padding-block: 10px;
   max-width: unset;
 }
 
-.navbar-link::after { display: none; }
+.navbar-link::after {
+  display: none;
+}
 
-.navbar-link .span { transition: var(--transition-1); }
+.navbar-link .span {
+  transition: var(--transition-1);
+}
 
 .navbar-link:is(:hover, :focus-visible, .active) .span {
   color: var(--gold-crayola);
@@ -1109,17 +1127,25 @@ body.nav-active { overflow: hidden; }
   transition: var(--transition-1);
 }
 
-.navbar-link:is(:hover, :focus-visible, .active) .separator { opacity: 1; }
+.navbar-link:is(:hover, :focus-visible, .active) .separator {
+  opacity: 1;
+}
 
-.navbar-title { margin-block-end: 15px; }
+.navbar-title {
+  margin-block-end: 15px;
+}
 
-.navbar-text { margin-block: 10px; }
+.navbar-text {
+  margin-block: 10px;
+}
 
-.navbar .body-4 { color: var(--quick-silver); }
+.sidebar-link {
+  transition: var(--transition-1);
+}
 
-.sidebar-link { transition: var(--transition-1); }
-
-.sidebar-link:is(:hover, :focus-visible) { color: var(--gold-crayola); }
+.sidebar-link:is(:hover, :focus-visible) {
+  color: var(--gold-crayola);
+}
 
 .navbar .text-center .separator {
   margin-block: 30px;
@@ -1141,11 +1167,6 @@ body.nav-active { overflow: hidden; }
   pointer-events: none;
   transition: var(--transition-2);
   z-index: 1;
-}
-
-.overlay.active {
-  opacity: 1;
-  pointer-events: all;
 }
 
 
@@ -1624,7 +1645,9 @@ body.nav-active { overflow: hidden; }
   display: inline;
   color: var(--gold-crayola);
 }
-
+.form-right{
+  background-color: #00404F; /*color derecha formulario*/
+}
 .form-right .headline-1 { margin-block-end: 40px; }
 
 .form-right .contact-label { margin-block-end: 5px; }
@@ -1780,7 +1803,7 @@ textarea.input-field {
   position: relative;
   padding: 50px 40px;
   background: var(--smoky-black-1) url("../images/footer-form-bg.png");
-  background-color: #00000060;
+  background-color:  #006479; 
   background-position: center top;
   background-repeat: repeat;
 }
@@ -1823,7 +1846,10 @@ textarea.input-field {
   margin-block: 40px 25px;
 }
 
-.footer-brand .separator { animation: rotate360 15s linear infinite; }
+.footer-brand .separator { animation: rotate360 15s linear infinite; 
+background-color: #ffffff;
+border-color: #006479;
+}
 
 .footer-brand .label-1 { margin-block-end: 30px; }
 
@@ -1947,7 +1973,7 @@ right: 50;
 }
 */
 .back-top-btn:is(:hover, :focus-visible) {
-  background-color: var(--white);
+  background-color: #00404F; /*Color del segundo whasap*/
   color: var(--gold-crayola);
 }
 
@@ -2514,7 +2540,8 @@ right: 50;
   .navbar .separator { display: none; }
 
   .navbar-link:is(:hover, :focus-visible, .active) .span {
-    transform: unset;
+    color: var(--gold-crayola);
+    transform: translateX(20px);
   }
 
   .navbar-link {
