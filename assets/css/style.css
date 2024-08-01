@@ -106,18 +106,23 @@
   }
   .span6{
     color: #006479; /*Inicio*/
+    font-size: 14px;
   }
   .span7{
     color: #006479; /*Productos*/
+    font-size: 14px;
   }
   .span8{
     color:#006479; /*Nosotros*/
+    font-size: 14px;
   }
   .span9{
     color: #006479; /*Contacto*/
+    font-size: 14px;
   }
   .span10{
     color:#006479;  /*Blogs*/
+    font-size: 14px;
   }
   .span11{
     color: #006479; /*EXPERIENCIA FINANCIERA*/
@@ -692,7 +697,7 @@ body.loaded { overflow: overlay; }
 }
 
 .section-subtitle::after {
-  content: url('../images/separator.svg');
+ 
   display: block;
   width: 100px;
   margin-inline: auto;
@@ -811,7 +816,7 @@ body.loaded { overflow: overlay; }
   left: 0;
   width: 50%;
   height: 100%;
-  background-image: linear-gradient(to right, transparent 0%, rgba(255, 0, 0, 0.4) 100%);
+  background-image: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.733) 100%);
   transform: skewX(-0.08turn) translateX(-180%);
 }
 
