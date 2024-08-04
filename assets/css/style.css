@@ -268,7 +268,7 @@
   
   .span52{
     color: rgb(33, 33, 33);/*Texto*/
-    font-size: 20px; /* Tamaño de la fuente */
+    font-size: 25px; /* Tamaño de la fuente */
   }
   .span53{
     color: rgb(0, 93, 96)/*FOOTER*/
@@ -322,7 +322,7 @@
     color: rgb(0, 93, 96)/*PRÉSTAMOS PERSONALES*/
   }
   .span70{
-    color: rgb(0, 93, 96)/*PRÉSTAMOS PERSONALES*/
+    color: rgb(255, 255, 255)/*PRÉSTAMOS PERSONALES*/
   }
   .span71{
     color: rgb(255, 255, 255)/*PRÉSTAMOS PERSONALES*/
@@ -331,7 +331,7 @@
     color: rgb(0, 93, 96)/*PRÉSTAMOS PERSONALES*/
   }
   .span73{
-    color: rgb(0, 93, 96)/*PRÉSTAMOS PERSONALES*/
+    color: rgb(255, 255, 255)/*PRÉSTAMOS PERSONALES*/
   }
   .span74{
     color: rgb(255, 255, 255)/*PRÉSTAMOS PERSONALES*/
@@ -340,7 +340,7 @@
     color: rgb(0, 93, 96)/*PRÉSTAMOS PERSONALES*/
   }
   .span76{
-    color: rgb(0, 93, 96)/*PRÉSTAMOS PERSONALES*/
+    color: rgb(255, 255, 255)/*PRÉSTAMOS PERSONALES*/
   }
   .span77{
     color: rgb(255, 255, 255)/*PRÉSTAMOS PERSONALES*/
@@ -349,9 +349,12 @@
     color: rgb(180, 186, 191)/*PRÉSTAMOS PERSONALES*/
   }
   .span79 {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 20px; /* Puedes ajustar el tamaño a tu preferencia */
     
+}
+.span700 {
+  color: #fff;
 }
 
   .span80{
@@ -2604,12 +2607,12 @@ right: 50;
    */
 
   .special-dish-content {
-    padding: 225px 120px;
-    padding-inline-end: 0;
+    padding: 125px 100px;
+    padding-inline-end:0%;
   }
 
   .special-dish-content .container {
-    max-width: 460px;
+    max-width: 750px;  /*extender texto*/
     margin-inline: 0;
   }
 
