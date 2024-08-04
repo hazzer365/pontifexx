@@ -386,6 +386,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
+  function trackPhoneClick() {
+    fbq('trackCustom', 'click_telefono');
+  }
+
+  // Añadir un escuchador de eventos para los clics en elementos con ID 'telefono'
+  document.addEventListener('DOMContentLoaded', function() {
+    var telefonoElements = document.querySelectorAll('#telefono');
+    telefonoElements.forEach(function(element) {
+      element.addEventListener('click', trackPhoneClick);
+    });
+  });
+
 
 
   
