@@ -400,6 +400,104 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+  function trackPhoneClick() {
+    fbq('trackCustom', 'click_correo');
+  }
+
+  // Añadir un escuchador de eventos para los clics en elementos con ID 'correo'
+  document.addEventListener('DOMContentLoaded', function() {
+    var correoElements = document.querySelectorAll('#correo');
+    correoElements.forEach(function(element) {
+      element.addEventListener('click', trackEmailClick);
+    });
+  });
+// Funciones para rastrear los eventos personalizados
+function trackPhoneClick() {
+  fbq('trackCustom', 'click_telefono');
+}
+
+function trackEmailClick() {
+  fbq('trackCustom', 'click_correo');
+}
+
+function trackMetaClick() {
+  fbq('trackCustom', 'click_meta');
+}
+
+function trackFacebookClick() {
+  fbq('trackCustom', 'click_facebook');
+}
+
+function trackInstagramClick() {
+  fbq('trackCustom', 'click_instagram');
+}
+
+function trackTikTokClick() {
+  fbq('trackCustom', 'click_tiktok');
+}
+
+function trackLinkedInClick() {
+  fbq('trackCustom', 'click_linkedin');
+}
+
+function trackGoogleMapsClick() {
+  fbq('trackCustom', 'click_google_maps');
+}
+
+function trackFormSubmit() {
+  fbq('trackCustom', 'sent_form');
+}
+
+// Inicializa los eventos una vez que el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', function() {
+  var telefonoElements = document.querySelectorAll('#telefono');
+  telefonoElements.forEach(function(element) {
+    element.addEventListener('click', trackPhoneClick);
+  });
+
+  var correoElements = document.querySelectorAll('#correo');
+  correoElements.forEach(function(element) {
+    element.addEventListener('click', trackEmailClick);
+  });
+
+  var metaElements = document.querySelectorAll('#meta');
+  metaElements.forEach(function(element) {
+    element.addEventListener('click', trackMetaClick);
+  });
+
+  var facebookElements = document.querySelectorAll('#facebook');
+  facebookElements.forEach(function(element) {
+    element.addEventListener('click', trackFacebookClick);
+  });
+
+  var instagramElements = document.querySelectorAll('#instagram');
+  instagramElements.forEach(function(element) {
+    element.addEventListener('click', trackInstagramClick);
+  });
+
+  var tiktokElements = document.querySelectorAll('#tiktok');
+  tiktokElements.forEach(function(element) {
+    element.addEventListener('click', trackTikTokClick);
+  });
+
+  var linkedinElements = document.querySelectorAll('#linkedin');
+  linkedinElements.forEach(function(element) {
+    element.addEventListener('click', trackLinkedInClick);
+  });
+
+  var googleMapsElements = document.querySelectorAll('#google-maps');
+  googleMapsElements.forEach(function(element) {
+    element.addEventListener('click', trackGoogleMapsClick);
+  });
+
+  var formElements = document.querySelectorAll('#sent-form');
+  formElements.forEach(function(element) {
+    element.addEventListener('click', trackFormSubmit);
+  });
+});
+
+
+
   
 
 
