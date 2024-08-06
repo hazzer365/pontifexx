@@ -208,11 +208,45 @@ document.addEventListener('DOMContentLoaded', function() {
       form.addEventListener('submit', function(event) {
           event.preventDefault(); // Evita el envío del formulario por defecto
 
+          // Obtén todos los campos del formulario
+          const fullName = form.querySelector('input[name="full-name"]');
+          const phone = form.querySelector('input[name="phone"]');
+          const email = form.querySelector('input[name="email"]');
+          const companyName = form.querySelector('input[name="company-name"]');
+          const help = form.querySelector('input[name="help"]');
+          const message = form.querySelector('textarea[name="message"]');
+
+          // Verifica que todos los campos estén llenos
+          if (fullName.value.trim() === "" || 
+              phone.value.trim() === "" || 
+              email.value.trim() === "" || 
+              companyName.value.trim() === "" || 
+              message.value.trim() === "") {
+              alert('Por favor, completa todos los campos antes de enviar.');
+              return;
+          }
+
+          // Validar el formato del correo electrónico
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(email.value.trim())) {
+              alert('Por favor, ingresa una dirección de correo electrónico válida.');
+              return;
+          }
+
+          // Validar el formato del número de teléfono (solo números y exactamente diez dígitos)
+          const phonePattern = /^\d{10}$/;
+          if (!phonePattern.test(phone.value.trim())) {
+              alert('Por favor, ingresa un número de teléfono válido de 10 dígitos.');
+              return;
+          }
+
           // Envía el correo usando EmailJS
           emailjs.sendForm('service_45qj2rj', 'template_cmv6o4v', form)
               .then(function(response) {
                   console.log('Success:', response.status, response.text);
                   alert('Tu mensaje ha sido enviado con éxito.');
+                  // Restablece el formulario después de enviar
+                  form.reset();
               }, function(error) {
                   console.log('Error:', error);
                   alert('Hubo un problema al enviar tu mensaje. Inténtalo de nuevo.');
@@ -222,6 +256,9 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error('Formulario con ID "contact-form" no encontrado.');
   }
 });
+
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
   var linkInstagram = document.getElementById('facebook');
