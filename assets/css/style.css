@@ -399,7 +399,15 @@
   .span92{
     color:rgb(0, 93, 96); /*Agenda boton una consulta*/
   }
- 
+  .span93 {
+    color: rgb(0, 93, 96);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+   
+    /* Esto es opcional y depende de si quieres centrar el elemento en toda la altura de la ventana */
+  }
+  
 
 
 

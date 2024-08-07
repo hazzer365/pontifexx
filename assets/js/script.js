@@ -435,13 +435,11 @@ function trackEmailClick() {
   fbq('trackCustom', 'click_correo');
 }
 
-function trackMetaClick() {
-  fbq('trackCustom', 'click_meta');
-}
-
 function trackFacebookClick() {
   fbq('trackCustom', 'click_facebook');
 }
+
+
 
 function trackInstagramClick() {
   fbq('trackCustom', 'click_instagram');
@@ -475,10 +473,7 @@ document.addEventListener('DOMContentLoaded', function() {
     element.addEventListener('click', trackEmailClick);
   });
 
-  var metaElements = document.querySelectorAll('#meta');
-  metaElements.forEach(function(element) {
-    element.addEventListener('click', trackMetaClick);
-  });
+  
 
   var facebookElements = document.querySelectorAll('#facebook');
   facebookElements.forEach(function(element) {
